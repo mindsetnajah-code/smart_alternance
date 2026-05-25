@@ -1,7 +1,8 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { MessageCircle } from 'lucide-react'
+import { PWAProvider } from '@/components/pwa-provider'
 import './globals.css'
 
 const geistSans = Geist({
@@ -15,36 +16,57 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
+  applicationName: 'Smart Alternance',
   title: {
     default: 'Smart Alternance - Construisez votre avenir',
     template: '%s | Smart Alternance',
   },
   description:
-    "Un programme complet pour les élèves et étudiants : orientation, bourse d'étude, formation de qualité et insertion professionnelle au Niger.",
+    "Un programme complet pour les eleves et etudiants : orientation, bourse d'etude, formation de qualite et insertion professionnelle au Niger.",
   keywords: [
     'Smart Alternance',
-    'orientation étudiante',
-    "bourse d'étude Niger",
+    'orientation etudiante',
+    "bourse d'etude Niger",
     'instituts partenaires Niger',
-    'inscription étudiant Niger',
+    'inscription etudiant Niger',
   ],
   openGraph: {
     title: 'Smart Alternance - Construisez votre avenir',
     description:
-      "Orientation, bourse d'étude et accompagnement vers la réussite professionnelle pour les élèves et étudiants au Niger.",
+      "Orientation, bourse d'etude et accompagnement vers la reussite professionnelle pour les eleves et etudiants au Niger.",
     type: 'website',
     locale: 'fr_NE',
   },
+  manifest: '/manifest.webmanifest',
   icons: {
     icon: [
       {
-        url: '/IMG-20260412-WA0032.jpg',
-        type: 'image/jpeg',
+        url: '/pwa-192x192.png',
+        sizes: '192x192',
+        type: 'image/png',
+      },
+      {
+        url: '/pwa-512x512.png',
+        sizes: '512x512',
+        type: 'image/png',
       },
     ],
-    shortcut: '/IMG-20260412-WA0032.jpg',
-    apple: '/IMG-20260412-WA0032.jpg',
+    shortcut: '/pwa-192x192.png',
+    apple: '/apple-icon.png',
   },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Smart Alternance',
+  },
+  formatDetection: {
+    telephone: true,
+  },
+}
+
+export const viewport: Viewport = {
+  themeColor: '#d69e2e',
+  colorScheme: 'light',
 }
 
 export default function RootLayout({
@@ -57,6 +79,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
       >
+        <PWAProvider />
         {children}
         <a
           href="https://wa.me/22786366706"

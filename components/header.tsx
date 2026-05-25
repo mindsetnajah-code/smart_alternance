@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
+import { PWAInstallButton } from "@/components/pwa-install-button"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { Menu, Sparkles, X } from "lucide-react"
@@ -63,6 +64,7 @@ export function Header() {
               {link.label}
             </Link>
           ))}
+          <PWAInstallButton />
           <Link href="/inscription">
             <Button className="rounded-full bg-primary px-5 text-primary-foreground shadow-lg shadow-primary/20 hover:bg-primary/90">
               <Sparkles className="h-4 w-4" />
@@ -99,6 +101,7 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
+            <PWAInstallButton fullWidth />
             <Link href="/inscription" onClick={() => setIsOpen(false)}>
               <Button className="w-full rounded-2xl bg-primary text-primary-foreground hover:bg-primary/90">
                 S'inscrire

@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { PWAInstallCard } from "@/components/pwa-install-card"
 import { Button } from "@/components/ui/button"
 import {
   ArrowRight,
@@ -131,16 +132,17 @@ export function HeroSection() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Link href="#programme">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-secondary/20 bg-white/75 text-secondary shadow-sm hover:bg-white hover:text-primary"
-                >
-                  Decouvrir le programme
-                </Button>
-              </Link>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-secondary/20 bg-white/75 text-secondary shadow-sm hover:bg-white hover:text-primary"
+              >
+                <a href="#programme">Decouvrir le programme</a>
+              </Button>
             </div>
+
+            <PWAInstallCard />
           </div>
 
           <div className="relative mx-auto w-full max-w-md">
