@@ -386,7 +386,7 @@ function InscriptionPageContent() {
                           size="lg"
                           disabled={isSubmitting}
                         >
-                          {isSubmitting ? "Préparation du PDF..." : "S&apos;inscrire maintenant"}
+                          {isSubmitting ? "Préparation du PDF..." : "S'inscrire maintenant"}
                         </Button>
 
                         <p className="text-center text-xs text-muted-foreground">
