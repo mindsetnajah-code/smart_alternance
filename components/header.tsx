@@ -15,7 +15,7 @@ export function Header() {
 
   const links = [
     { href: "/", label: "Accueil", active: pathname === "/" },
-    { href: "/programme", label: "Programme", active: pathname === "/programme" },
+    { href: "/programme", label: "Etudier a l'etranger", active: pathname === "/programme" },
     { href: "/instituts", label: "Instituts partenaires", active: pathname === "/instituts" },
   ]
 

@@ -179,11 +179,10 @@ function InscriptionPageContent() {
         link.href = pdfUrl
         link.download = fileName
         link.click()
-
-        window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`, "_blank", "noopener,noreferrer")
         setShareMode("fallback")
       }
 
+      window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`, "_blank", "noopener,noreferrer")
       setIsSubmitted(true)
     } catch {
       setSubmitError(

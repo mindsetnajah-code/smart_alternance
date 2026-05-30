@@ -19,9 +19,9 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Programme",
+  title: "Etudier a l'etranger",
   description:
-    "Découvrez le programme Smart Alternance, les destinations d'études disponibles et l'accompagnement complet proposé aux étudiants.",
+    "Découvrez Etudier a l'etranger Smart Alternance, les destinations d'études disponibles et l'accompagnement complet proposé aux étudiants.",
 }
 
 const contactPhone = "+227 86366706"
@@ -34,7 +34,7 @@ const pillars = [
     description: "Un accès facilité à des études de qualité avec un budget mieux maîtrisé.",
     features: [
       "Orientation vers des formations adaptées à votre profil",
-      "Réduction pouvant aller jusqu'à 50% selon le programme",
+      "Réduction pouvant aller jusqu'à 50% selon Etudier a l'etranger",
       "Suivi personnalisé avant et après l'inscription",
       "Conseils sur le choix de la filière et du pays",
     ],
@@ -154,7 +154,7 @@ export default function ProgrammePage() {
             <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
               <div>
                 <span className="mb-5 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white/90">
-                  Programme Smart Alternance
+                  Etudier a l'etranger Smart Alternance
                 </span>
                 <h1 className="max-w-3xl text-balance text-4xl font-bold md:text-5xl">
                   Un accompagnement structuré pour étudier au Niger ou à l'international
@@ -182,7 +182,7 @@ export default function ProgrammePage() {
                 <div className="relative h-[26rem] overflow-hidden rounded-[1.4rem] bg-white p-3 sm:h-[32rem] lg:h-[36rem]">
                   <Image
                     src={destinationImages.Canada}
-                    alt="Visuel Smart Alternance du programme et des destinations"
+                    alt="Visuel Smart Alternance d'Etudier a l'etranger et des destinations"
                     fill
                     className="object-contain"
                     sizes="(max-width: 1024px) 100vw, 45vw"
@@ -198,7 +198,7 @@ export default function ProgrammePage() {
           <div className="container mx-auto px-4">
             <div className="mx-auto mb-14 max-w-2xl text-center">
               <h2 className="text-balance text-3xl font-bold text-foreground md:text-4xl">
-                Notre programme en 3 piliers
+                Etudier a l'etranger en 3 piliers
               </h2>
               <p className="mt-4 text-pretty text-muted-foreground">
                 Un cadre simple, concret et rassurant pour vous aider à avancer avec méthode.

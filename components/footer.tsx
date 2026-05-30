@@ -4,7 +4,7 @@ import { Mail, MapPin, MessageCircle, Phone, Sparkles } from "lucide-react"
 
 const navLinks = [
   { href: "/", label: "Accueil" },
-  { href: "/programme", label: "Programme" },
+  { href: "/programme", label: "Etudier a l'etranger" },
   { href: "/instituts", label: "Instituts partenaires" },
   { href: "/inscription", label: "Inscription" },
 ]
@@ -65,7 +65,7 @@ export function Footer() {
             </div>
 
             <p className="max-w-sm text-sm leading-6 text-[#f4efe4]/78">
-              Construisez votre avenir avec un programme complet pour les eleves et etudiants, du choix de parcours
+              Construisez votre avenir avec un Etudier a l'etranger complet pour les eleves et etudiants, du choix de parcours
               jusqu'a l'insertion professionnelle.
             </p>
           </div>

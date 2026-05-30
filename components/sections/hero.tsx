@@ -85,8 +85,7 @@ export function HeroSection() {
             </h1>
 
             <p className="mx-auto mb-8 max-w-2xl text-pretty text-lg leading-8 text-muted-foreground lg:mx-0 md:text-xl">
-              Un programme complet pour les eleves et etudiants BEPC, BAC, candidats libres, licence et master.
-              Formation de qualite, bourse d'etude et insertion professionnelle au Niger et a l'international.
+                Un Etudier a l'etranger complet pour les eleves et etudiants BEPC, BAC, candidats libres, licence et master.
             </p>
 
             <div className="mb-8 flex flex-wrap items-center justify-center gap-3 text-sm text-muted-foreground lg:justify-start">
@@ -138,7 +137,7 @@ export function HeroSection() {
                 variant="outline"
                 className="border-secondary/20 bg-white/75 text-secondary shadow-sm hover:bg-white hover:text-primary"
               >
-                <a href="#programme">Decouvrir le programme</a>
+                <a href="#etudier-a-letranger">Decouvrir Etudier a l'etranger</a>
               </Button>
             </div>
 

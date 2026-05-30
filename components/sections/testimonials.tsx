@@ -27,7 +27,7 @@ const testimonials = [
     name: "Oumarou Guero Fatiya.",
     role: "Stage d'immersion",
     content:
-      "Le programme d'insertion professionnelle est incroyable. J'ai obtenu un stage dans une grande entreprise des ma deuxieme annee.",
+      "Le Etudier a l'etranger d'insertion professionnelle est incroyable. J'ai obtenu un stage dans une grande entreprise des ma deuxieme annee.",
     reaction: "👏",
     tag: "Stage valide",
     avatar: "/image testimonials/file_000000003f1471f49dcc945c01f27919.png",

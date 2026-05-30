@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: '%s | Smart Alternance',
   },
   description:
-    "Un programme complet pour les eleves et etudiants : orientation, bourse d'etude, formation de qualite et insertion professionnelle au Niger.",
+    "Un Etudier a l'etranger complet pour les eleves et etudiants : orientation, bourse d'etude, formation de qualite et insertion professionnelle au Niger.",
   keywords: [
     'Smart Alternance',
     'orientation etudiante',

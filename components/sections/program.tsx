@@ -48,7 +48,7 @@ const programs = [
 export function ProgramSection() {
   return (
     <section
-      id="programme"
+      id="etudier-a-letranger"
       className="relative overflow-hidden bg-[linear-gradient(180deg,#f8f6ef_0%,#fffdf7_42%,#fff9ee_100%)] py-20 lg:py-28"
     >
       <div className="pointer-events-none absolute inset-0">
@@ -62,7 +62,7 @@ export function ProgramSection() {
             Un parcours pense pour la reussite
           </div>
           <h2 className="mb-4 text-balance text-3xl font-bold text-foreground md:text-4xl">
-            Notre programme en 3 piliers
+            Etudier a l'etranger en 3 piliers
           </h2>
           <p className="text-pretty text-lg text-muted-foreground">
             Un parcours structure pour vous accompagner de la formation jusqu'a l'emploi avec une experience plus
@@ -137,7 +137,7 @@ export function ProgramSection() {
 
         <div className="mt-10 text-center">
           <Button asChild size="lg" className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
-            <Link href="/programme">Decouvrir le programme complet</Link>
+            <Link href="/programme">Decouvrir Etudier a l'etranger complet</Link>
           </Button>
         </div>
       </div>
