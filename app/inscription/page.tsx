@@ -174,15 +174,41 @@ function InscriptionPageContent() {
           files: [pdfFile],
         })
         setShareMode("share")
+        // Open WhatsApp as a fallback to ensure the conversation is visible
+        window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`, "_blank", "noopener,noreferrer")
       } else {
+        // Trigger a download so the user keeps a local copy
         const link = document.createElement("a")
         link.href = pdfUrl
         link.download = fileName
         link.click()
-        setShareMode("fallback")
+
+        // Try to upload the PDF to a temporary file host so we can include a direct link in WhatsApp
+        try {
+          const form = new FormData()
+          form.append("file", pdfFile)
+
+          const resp = await fetch("https://file.io/?expires=7d", {
+            method: "POST",
+            body: form,
+          })
+
+          const data = await resp.json()
+          if (data && data.success && data.link) {
+            const linkText = whatsappText + "\n\nTélécharger le PDF: " + data.link
+            window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(linkText)}`, "_blank", "noopener,noreferrer")
+            setShareMode("upload")
+          } else {
+            // If upload failed, open WhatsApp with the basic message and ask user to attach file manually
+            window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`, "_blank", "noopener,noreferrer")
+            setShareMode("fallback")
+          }
+        } catch (err) {
+          window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`, "_blank", "noopener,noreferrer")
+          setShareMode("fallback")
+        }
       }
 
-      window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`, "_blank", "noopener,noreferrer")
       setIsSubmitted(true)
     } catch {
       setSubmitError(
