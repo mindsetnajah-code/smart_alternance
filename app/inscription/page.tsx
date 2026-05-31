@@ -124,31 +124,6 @@ function InscriptionPageContent() {
     try {
       const selectedFiliere = formData.filiere || "Non précisée"
       const selectedInstitute = formData.institut ? ` | Institut souhaité: ${formData.institut}` : ""
-      const pdfBlob = buildApplicationPdf({
-        nom: formData.nom,
-        niveau: formData.niveau,
-        telephone: formData.telephone,
-        telephoneParent: formData.telephoneParent,
-        email: formData.email,
-        filiere: `${selectedFiliere}${selectedInstitute}`,
-      })
-
-      const fileName = `dossier-smart-alternance-${formData.nom
-        .trim()
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/(^-|-$)/g, "") || "candidat"}.pdf`
-
-      const pdfFile = new File([pdfBlob], fileName, { type: "application/pdf" })
-      const pdfUrl = URL.createObjectURL(pdfBlob)
-
-      if (generatedPdfUrl) {
-        URL.revokeObjectURL(generatedPdfUrl)
-      }
-
-      setGeneratedPdfUrl(pdfUrl)
 
       const whatsappText =
         `Bonjour Smart Alternance, je viens de soumettre mon dossier d'inscription.\n\n` +
@@ -161,60 +136,60 @@ function InscriptionPageContent() {
         `${formData.institut ? `Institut souhaité: ${formData.institut}\n` : ""}` +
         `Je vous transmets également mon PDF d'inscription.`
 
-      const canShareFile =
-        typeof navigator !== "undefined" &&
-        "share" in navigator &&
-        "canShare" in navigator &&
-        navigator.canShare({ files: [pdfFile] })
+      // Open WhatsApp immediately without waiting for PDF
+      window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`, "_blank", "noopener,noreferrer")
 
-      if (canShareFile) {
-        await navigator.share({
-          title: "Dossier d'inscription Smart Alternance",
-          text: whatsappText,
-          files: [pdfFile],
-        })
-        setShareMode("share")
-        // Open WhatsApp as a fallback to ensure the conversation is visible
-        window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`, "_blank", "noopener,noreferrer")
-      } else {
-        // Trigger a download so the user keeps a local copy
-        const link = document.createElement("a")
-        link.href = pdfUrl
-        link.download = fileName
-        link.click()
+      // Generate and handle PDF in the background
+      setIsSubmitted(true)
+      setShareMode("fallback")
 
-        // Try to upload the PDF to a temporary file host so we can include a direct link in WhatsApp
+      // Non-blocking PDF generation and upload
+      setTimeout(() => {
         try {
+          const pdfBlob = buildApplicationPdf({
+            nom: formData.nom,
+            niveau: formData.niveau,
+            telephone: formData.telephone,
+            telephoneParent: formData.telephoneParent,
+            email: formData.email,
+            filiere: `${selectedFiliere}${selectedInstitute}`,
+          })
+
+          const fileName = `dossier-smart-alternance-${formData.nom
+            .trim()
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/[^a-z0-9]+/g, "-")
+            .replace(/(^-|-$)/g, "") || "candidat"}.pdf`
+
+          const pdfFile = new File([pdfBlob], fileName, { type: "application/pdf" })
+          const pdfUrl = URL.createObjectURL(pdfBlob)
+
+          if (generatedPdfUrl) {
+            URL.revokeObjectURL(generatedPdfUrl)
+          }
+
+          setGeneratedPdfUrl(pdfUrl)
+
+          // Try to upload PDF for direct link sharing
           const form = new FormData()
           form.append("file", pdfFile)
 
-          const resp = await fetch("https://file.io/?expires=7d", {
+          fetch("https://file.io/?expires=7d", {
             method: "POST",
             body: form,
           })
-
-          const data = await resp.json()
-          if (data && data.success && data.link) {
-            const linkText = whatsappText + "\n\nTélécharger le PDF: " + data.link
-            window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(linkText)}`, "_blank", "noopener,noreferrer")
-            setShareMode("upload")
-          } else {
-            // If upload failed, open WhatsApp with the basic message and ask user to attach file manually
-            window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`, "_blank", "noopener,noreferrer")
-            setShareMode("fallback")
-          }
+            .then((resp) => resp.json())
+            .catch(() => ({}))
         } catch (err) {
-          window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`, "_blank", "noopener,noreferrer")
-          setShareMode("fallback")
+          // Silent fail for background PDF generation
         }
-      }
-
-      setIsSubmitted(true)
-    } catch {
+      }, 0)
+    } catch (err) {
       setSubmitError(
-        "Impossible de préparer le PDF ou d'ouvrir WhatsApp pour le moment. Veuillez réessayer."
+        "Impossible d'ouvrir WhatsApp pour le moment. Veuillez réessayer."
       )
-    } finally {
       setIsSubmitting(false)
     }
   }
