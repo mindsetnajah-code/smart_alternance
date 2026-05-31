@@ -136,12 +136,16 @@ function InscriptionPageContent() {
         `${formData.institut ? `Institut souhaité: ${formData.institut}\n` : ""}` +
         `Je vous transmets également mon PDF d'inscription.`
 
-      // Open WhatsApp immediately without waiting for PDF
-      window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`, "_blank", "noopener,noreferrer")
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`
+      const opened = window.open(whatsappUrl, "_blank", "noopener,noreferrer")
+      if (!opened) {
+        window.location.href = whatsappUrl
+      }
 
       // Generate and handle PDF in the background
       setIsSubmitted(true)
       setShareMode("fallback")
+      setIsSubmitting(false)
 
       // Non-blocking PDF generation and upload
       setTimeout(() => {
@@ -263,6 +267,7 @@ function InscriptionPageContent() {
                           <Button
                             onClick={() => {
                               setIsSubmitted(false)
+                              setIsSubmitting(false)
                               setSubmitError("")
                             }}
                             variant="outline"
