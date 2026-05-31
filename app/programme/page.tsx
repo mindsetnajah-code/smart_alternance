@@ -72,7 +72,7 @@ const destinationImages: Record<string, string> = {
   Belgique: "/destinations/IMG-20260519-WA0167(1).jpg",
   Chine: "/destinations/IMG-20260508-WA0152.jpg",
   Turquie: "/destinations/IMG-20260508-WA0153.jpg",
-  Espagne: "/destinations/IMG-20260508-WA0151.jpg",
+  Espagne: "/destinations/file_00000000ace871f8ab33efb567eae266.png",
 }
 
 const destinations = [
