@@ -22,17 +22,17 @@ const quickNotes = [
   {
     icon: Briefcase,
     label: "Insertion rapide",
-    className: "left-[-1rem] top-14 animate-[float_7s_ease-in-out_infinite]",
+    className: "hidden md:flex left-[-1rem] top-14 animate-[float_7s_ease-in-out_infinite]",
   },
   {
     icon: Sparkles,
     label: "Bourses et opportunites",
-    className: "right-[-0.5rem] top-8 animate-[drift_9s_ease-in-out_infinite]",
+    className: "hidden md:flex right-[-0.5rem] top-8 animate-[drift_9s_ease-in-out_infinite]",
   },
   {
     icon: GraduationCap,
     label: "Orientation claire",
-    className: "bottom-10 left-3 animate-[float_8s_ease-in-out_infinite]",
+    className: "hidden md:flex bottom-10 left-3 animate-[float_8s_ease-in-out_infinite]",
   },
 ]
 
@@ -145,12 +145,12 @@ export function HeroSection() {
           </div>
 
           <div className="relative mx-auto w-full max-w-md">
-            <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-primary/20 via-transparent to-secondary/20 blur-2xl" />
+            <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-primary/20 via-transparent to-secondary/20 blur-2xl motion-reduce:blur-xl" />
 
             {quickNotes.map((note, index) => (
               <div
                 key={note.label}
-                className={`absolute z-10 rounded-full border border-white/80 bg-white/90 px-4 py-2 text-sm font-medium text-foreground shadow-lg backdrop-blur ${note.className}`}
+                className={`absolute z-10 items-center rounded-full border border-white/80 bg-white/90 px-4 py-2 text-sm font-medium text-foreground shadow-lg backdrop-blur ${note.className}`}
                 style={{ animationDelay: `${index * 0.5}s` }}
               >
                 <note.icon className="mr-2 inline h-4 w-4 text-primary" />
@@ -167,10 +167,10 @@ export function HeroSection() {
                 </div>
 
                 <div className="relative mx-auto flex w-full max-w-[18rem] items-center justify-center rounded-[2rem] border border-primary/10 bg-white p-5 shadow-inner">
-                  <div className="absolute inset-3 rounded-[1.6rem] border border-dashed border-primary/20 animate-[drift_12s_ease-in-out_infinite]" />
-                  <div className="absolute -left-3 top-8 h-8 w-8 rounded-full bg-primary/15 blur-md animate-[float_6s_ease-in-out_infinite]" />
-                  <div className="absolute -right-2 bottom-12 h-10 w-10 rounded-full bg-secondary/20 blur-md animate-[drift_8s_ease-in-out_infinite]" />
-                  <div className="absolute left-1/2 top-2 -translate-x-1/2 rounded-full border border-primary/15 bg-white/90 px-3 py-1 text-xs font-semibold text-primary shadow-sm animate-[float_7s_ease-in-out_infinite]">
+                  <div className="absolute inset-3 rounded-[1.6rem] border border-dashed border-primary/20 motion-safe:animate-[drift_12s_ease-in-out_infinite]" />
+                  <div className="absolute -left-3 top-8 h-8 w-8 rounded-full bg-primary/15 blur-md motion-safe:animate-[float_6s_ease-in-out_infinite]" />
+                  <div className="absolute -right-2 bottom-12 h-10 w-10 rounded-full bg-secondary/20 blur-md motion-safe:animate-[drift_8s_ease-in-out_infinite]" />
+                  <div className="absolute left-1/2 top-2 -translate-x-1/2 rounded-full border border-primary/15 bg-white/90 px-3 py-1 text-xs font-semibold text-primary shadow-sm motion-safe:animate-[float_7s_ease-in-out_infinite]">
                     Logo officiel
                   </div>
 
@@ -180,7 +180,7 @@ export function HeroSection() {
                     width={320}
                     height={320}
                     loading="eager"
-                    className="relative z-[1] h-auto w-full rounded-full object-cover transition-transform duration-700 hover:scale-105"
+                    className="relative z-[1] h-auto w-full rounded-full object-cover transition-transform duration-700 hover:scale-105 motion-reduce:transition-none"
                     priority
                   />
                 </div>

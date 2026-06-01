@@ -61,7 +61,7 @@ const reactions = [
 
 export function TestimonialsSection() {
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f9f7ef_0%,#fffdf8_38%,#fff9ee_100%)] py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f9f7ef_0%,#fffdf8_38%,#fff9ee_100%)] py-20 lg:py-28 [content-visibility:auto] [contain-intrinsic-size:1px_1200px]">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_15%,rgba(245,158,11,0.14),transparent_24%),radial-gradient(circle_at_85%_25%,rgba(22,101,52,0.12),transparent_28%),radial-gradient(circle_at_50%_100%,rgba(245,158,11,0.1),transparent_30%)]" />
         <div className="absolute left-[-4rem] top-20 h-40 w-40 rounded-full bg-primary/10 blur-3xl" />
@@ -98,7 +98,7 @@ export function TestimonialsSection() {
             </div>
           </div>
 
-          <div className="relative mx-auto h-[20rem] w-full max-w-xl">
+          <div className="relative mx-auto hidden h-[20rem] w-full max-w-xl lg:block">
             <div className="absolute inset-0 rounded-[2rem] border border-white/60 bg-white/40 shadow-[0_24px_80px_rgba(34,50,30,0.08)] backdrop-blur-sm" />
 
             {galleryImages.map((image, index) => (
@@ -112,16 +112,18 @@ export function TestimonialsSection() {
                   alt={image.alt}
                   width={240}
                   height={240}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 180px, 240px"
                   className="h-full w-full rounded-[1.2rem] object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
             ))}
 
-            <div className="absolute bottom-4 left-6 rounded-full border border-primary/15 bg-white/90 px-4 py-2 text-sm font-medium text-foreground shadow-lg animate-[drift_9s_ease-in-out_infinite]">
+            <div className="absolute bottom-4 left-6 rounded-full border border-primary/15 bg-white/90 px-4 py-2 text-sm font-medium text-foreground shadow-lg motion-safe:animate-[drift_9s_ease-in-out_infinite]">
               <span className="mr-2 text-base">❤️</span>
               Accompagnement humain
             </div>
-            <div className="absolute right-6 top-10 rounded-full border border-secondary/15 bg-white/90 px-4 py-2 text-sm font-medium text-foreground shadow-lg animate-[float_7s_ease-in-out_infinite]">
+            <div className="absolute right-6 top-10 rounded-full border border-secondary/15 bg-white/90 px-4 py-2 text-sm font-medium text-foreground shadow-lg motion-safe:animate-[float_7s_ease-in-out_infinite]">
               <span className="mr-2 text-base">✨</span>
               Parcours motive
             </div>
@@ -132,10 +134,10 @@ export function TestimonialsSection() {
           {testimonials.map((testimonial, index) => (
             <Card
               key={testimonial.name}
-              className="group relative overflow-hidden border-border/70 bg-white/85 shadow-[0_20px_50px_rgba(34,50,30,0.08)] backdrop-blur transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_26px_70px_rgba(34,50,30,0.12)]"
+              className="group relative overflow-hidden border-border/70 bg-white/85 shadow-[0_20px_50px_rgba(34,50,30,0.08)] backdrop-blur transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_26px_70px_rgba(34,50,30,0.12)] motion-reduce:transition-none motion-reduce:hover:translate-y-0"
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${testimonial.accent} opacity-80`} />
-              <div className="absolute right-4 top-4 rounded-full border border-white/80 bg-white/90 px-3 py-1 text-sm shadow-sm animate-[float_6s_ease-in-out_infinite]">
+              <div className="absolute right-4 top-4 rounded-full border border-white/80 bg-white/90 px-3 py-1 text-sm shadow-sm motion-safe:animate-[float_6s_ease-in-out_infinite]">
                 {testimonial.reaction}
               </div>
 
@@ -143,13 +145,14 @@ export function TestimonialsSection() {
                 <div className="mb-5 flex items-start justify-between gap-4">
                   <div className="flex items-center gap-4">
                     <div
-                      className="relative h-16 w-16 overflow-hidden rounded-2xl border border-white/80 shadow-md transition-transform duration-500 group-hover:rotate-3 group-hover:scale-105 animate-[drift_8s_ease-in-out_infinite]"
+                      className="relative h-16 w-16 overflow-hidden rounded-2xl border border-white/80 shadow-md transition-transform duration-500 group-hover:rotate-3 group-hover:scale-105 motion-safe:animate-[drift_8s_ease-in-out_infinite]"
                       style={{ animationDelay: `${index * 0.5}s` }}
                     >
                       <Image
                         src={testimonial.avatar}
                         alt={testimonial.name}
                         fill
+                        loading="lazy"
                         className="object-cover"
                         sizes="64px"
                       />

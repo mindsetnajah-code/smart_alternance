@@ -35,7 +35,7 @@ const faqs = [
 
 export function FAQSection() {
   return (
-    <section className="bg-background py-20 lg:py-28">
+    <section className="bg-background py-20 lg:py-28 [content-visibility:auto] [contain-intrinsic-size:1px_700px]">
       <div className="container mx-auto px-4">
         <div className="mx-auto mb-16 max-w-2xl text-center">
           <h2 className="mb-4 text-balance text-3xl font-bold text-foreground md:text-4xl">

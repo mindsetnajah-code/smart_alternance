@@ -1,19 +1,9 @@
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { MessageCircle } from 'lucide-react'
+import { NetworkStatusBadge } from '@/components/network-status-badge'
 import { PWAProvider } from '@/components/pwa-provider'
 import './globals.css'
-
-const geistSans = Geist({
-  subsets: ['latin'],
-  variable: '--font-geist-sans',
-})
-
-const geistMono = Geist_Mono({
-  subsets: ['latin'],
-  variable: '--font-geist-mono',
-})
 
 export const metadata: Metadata = {
   applicationName: 'Smart Alternance',
@@ -76,11 +66,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" data-scroll-behavior="smooth">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
-      >
+      <body className="font-sans antialiased">
         <PWAProvider />
         {children}
+        <NetworkStatusBadge />
         <a
           href="https://wa.me/22786366706"
           target="_blank"

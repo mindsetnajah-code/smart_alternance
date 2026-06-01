@@ -27,7 +27,7 @@ const highlights = ["Suivi humain", "Frais reduits", "Competences utiles", "Debo
 
 export function AdvantagesSection() {
   return (
-    <section className="relative overflow-hidden bg-background py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-background py-20 lg:py-28 [content-visibility:auto] [contain-intrinsic-size:1px_900px]">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(245,158,11,0.08),transparent_22%),radial-gradient(circle_at_86%_24%,rgba(22,101,52,0.08),transparent_22%)]" />
       </div>

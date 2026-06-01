@@ -49,7 +49,7 @@ export function ProgramSection() {
   return (
     <section
       id="etudier-a-letranger"
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#f8f6ef_0%,#fffdf7_42%,#fff9ee_100%)] py-20 lg:py-28"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#f8f6ef_0%,#fffdf7_42%,#fff9ee_100%)] py-20 lg:py-28 [content-visibility:auto] [contain-intrinsic-size:1px_1200px]"
     >
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_16%_18%,rgba(245,158,11,0.12),transparent_24%),radial-gradient(circle_at_84%_22%,rgba(22,101,52,0.1),transparent_26%),radial-gradient(circle_at_50%_100%,rgba(245,158,11,0.07),transparent_30%)]" />
