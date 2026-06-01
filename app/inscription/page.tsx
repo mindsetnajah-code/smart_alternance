@@ -13,6 +13,8 @@ import { buildApplicationPdf } from "@/lib/application-pdf"
 import { Briefcase, CheckCircle2, FileDown, GraduationCap, MessageCircle, Users } from "lucide-react"
 
 const filieres = [
+  "Droit",
+  "Autres",
   "Informatique et Réseaux",
   "Génie Civil",
   "Gestion et Commerce",
@@ -23,6 +25,26 @@ const filieres = [
   "Architecture et BTP",
   "Marketing Digital",
   "Ressources Humaines",
+]
+
+const institutes = [
+  "IFAC Agro Industrie et de Commerce",
+  "Institut Supérieur de Santé",
+  "École Supérieure de Management",
+  "ESPA",
+  "SUP-SANTÉ",
+  "SUP'MANAGEMENT Niger",
+  "GEGA",
+  "EPI Niger Business School",
+  "I.H.E.S.P",
+  "ECCAM",
+  "HETEC",
+  "Institut Africain de Santé Privé (I.A.S.P)",
+  "ISESS",
+  "Université Moderne des Sciences de la Santé (UM2S)",
+  "INSA-IGP",
+  "Institut Privé d'Excellence en Management et en Comptabilité (I.P.E.M)",
+  "Institut Privé des Hautes Études de la Santé (IPHES)",
 ]
 
 const whatsappNumber = "22786366706"
@@ -62,7 +84,9 @@ function InscriptionPageContent() {
     telephoneParent: "",
     email: "",
     filiere: "",
+    filiereAutre: "",
     institut: "",
+    bourse: "",
   })
 
   useEffect(() => {
@@ -122,8 +146,12 @@ function InscriptionPageContent() {
     setSubmitError("")
 
     try {
-      const selectedFiliere = formData.filiere || "Non précisée"
+      const selectedFiliere =
+        formData.filiere === "Autres" && formData.filiereAutre.trim()
+          ? `Autres: ${formData.filiereAutre.trim()}`
+          : formData.filiere || "Non précisée"
       const selectedInstitute = formData.institut ? ` | Institut souhaité: ${formData.institut}` : ""
+      const selectedBourse = formData.bourse ? ` | Bourse: ${formData.bourse}` : ""
 
       const whatsappText =
         `Bonjour Smart Alternance, je viens de soumettre mon dossier d'inscription.\n\n` +
@@ -134,6 +162,7 @@ function InscriptionPageContent() {
         `Niveau: ${formatLevel(formData.niveau)}\n` +
         `Filière: ${selectedFiliere}\n` +
         `${formData.institut ? `Institut souhaité: ${formData.institut}\n` : ""}` +
+        `${formData.bourse ? `Bourse: ${formData.bourse}\n` : ""}` +
         `Je vous transmets également mon PDF d'inscription.`
 
       const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`
@@ -156,7 +185,7 @@ function InscriptionPageContent() {
             telephone: formData.telephone,
             telephoneParent: formData.telephoneParent,
             email: formData.email,
-            filiere: `${selectedFiliere}${selectedInstitute}`,
+            filiere: `${selectedFiliere}${selectedInstitute}${selectedBourse}`,
           })
 
           const fileName = `dossier-smart-alternance-${formData.nom
@@ -200,7 +229,17 @@ function InscriptionPageContent() {
 
   const handleInputChange = (field: keyof typeof formData, value: string) => {
     setErrors((prev) => ({ ...prev, [field]: undefined }))
-    setFormData((prev) => ({ ...prev, [field]: value }))
+    setFormData((prev) => {
+      if (field === "institut" && value === "__none__") {
+        return { ...prev, institut: "" }
+      }
+
+      if (field === "filiere" && value !== "Autres") {
+        return { ...prev, filiere: value, filiereAutre: "" }
+      }
+
+      return { ...prev, [field]: value }
+    })
   }
 
   return (
@@ -370,20 +409,66 @@ function InscriptionPageContent() {
                               <SelectValue placeholder="Sélectionnez une filière" />
                             </SelectTrigger>
                             <SelectContent>
-                              {filieres.map((filiere) => (
-                                <SelectItem key={filiere} value={filiere}>
-                                  {filiere}
+                              <SelectItem value="Droit">Droit</SelectItem>
+                              <SelectItem value="Autres">Autres</SelectItem>
+                              {filieres
+                                .filter((filiere) => filiere !== "Droit" && filiere !== "Autres")
+                                .map((filiere) => (
+                                  <SelectItem key={filiere} value={filiere}>
+                                    {filiere}
+                                  </SelectItem>
+                                ))}
+                            </SelectContent>
+                          </Select>
+                        </div>
+
+                        {formData.filiere === "Autres" ? (
+                          <div className="space-y-2">
+                            <Label htmlFor="filiereAutre">Précisez votre filière</Label>
+                            <Input
+                              id="filiereAutre"
+                              placeholder="Ex: Design, Santé, Droit..."
+                              value={formData.filiereAutre}
+                              onChange={(e) => handleInputChange("filiereAutre", e.target.value)}
+                            />
+                          </div>
+                        ) : null}
+
+                        <div className="space-y-2">
+                          <Label htmlFor="institut">Institut choisi (optionnel)</Label>
+                          <Select
+                            value={formData.institut}
+                            onValueChange={(value) => handleInputChange("institut", value)}
+                          >
+                            <SelectTrigger id="institut">
+                              <SelectValue placeholder="Choisissez un institut partenaire" />
+                            </SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="__none__">Aucun institut choisi</SelectItem>
+                              {institutes.map((institute) => (
+                                <SelectItem key={institute} value={institute}>
+                                  {institute}
                                 </SelectItem>
                               ))}
                             </SelectContent>
                           </Select>
                         </div>
 
-                        {formData.institut ? (
-                          <div className="rounded-xl border border-primary/20 bg-primary/5 p-4 text-sm text-muted-foreground">
-                            Institut sélectionné : <span className="font-medium text-foreground">{formData.institut}</span>
-                          </div>
-                        ) : null}
+                        <div className="space-y-2">
+                          <Label htmlFor="bourse">Bourse nationale ou internationale (optionnel)</Label>
+                          <Select
+                            value={formData.bourse}
+                            onValueChange={(value) => handleInputChange("bourse", value)}
+                          >
+                            <SelectTrigger id="bourse">
+                              <SelectValue placeholder="Choisissez le type de bourse" />
+                            </SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="Nationale">Nationale</SelectItem>
+                              <SelectItem value="Internationale">Internationale</SelectItem>
+                            </SelectContent>
+                          </Select>
+                        </div>
 
                         <Button
                           type="submit"
@@ -507,3 +592,4 @@ export default function InscriptionPage() {
     </Suspense>
   )
 }
+

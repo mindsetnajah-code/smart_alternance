@@ -186,6 +186,7 @@ export default function ProgrammePage() {
                     fill
                     className="object-contain"
                     sizes="(max-width: 1024px) 100vw, 45vw"
+                    loading="eager"
                     priority
                   />
                 </div>
@@ -263,6 +264,8 @@ export default function ProgrammePage() {
                       fill
                       className="object-contain"
                       sizes="(max-width: 1280px) 100vw, 33vw"
+                      loading={destination.highlight ? "eager" : "lazy"}
+                      priority={destination.highlight}
                     />
                   </div>
                   <CardHeader className="pb-4">
