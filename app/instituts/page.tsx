@@ -113,6 +113,68 @@ const institutes = [
     ],
   },
   {
+    name: "EPN",
+    description:
+      "L'Ecole Polytechnique de Niamey forme des profils techniques et polyvalents avec une approche orientée vers l'innovation, la pratique et l'employabilité.",
+    category: "Polytechnique",
+    logo: "/instituts parternaires/IMG_20260602_185851_172@1538726220.jpg",
+    programs: [
+      "Ingénierie",
+      "Formation technique",
+      "Innovation appliquée",
+    ],
+  },
+  {
+    name: "ESPIM",
+    description:
+      "L'Ecole Supérieure Privée d'Ingénierie et de Management associe les compétences techniques et managériales pour préparer des profils complets.",
+    category: "Ingénierie et management",
+    logo: "/instituts parternaires/cropped-logo.png",
+    programs: [
+      "Ingénierie",
+      "Management",
+      "Leadership appliqué",
+    ],
+  },
+  {
+    name: "IPAGES",
+    description:
+      "Un institut orienté vers les sciences agro-pastorales et le développement rural, avec une formation pensée pour le terrain et l'employabilité.",
+    category: "Agriculture et développement rural",
+    logo: "/instituts parternaires/file_00000000fe1871f494babeb5eafb5a6f.png",
+    programs: [
+      "Agriculture",
+      "Élevage",
+      "Environnement",
+      "Génie rural",
+      "Socio-économie",
+    ],
+  },
+  {
+    name: "ISSSPT",
+    description:
+      "Un institut spécialisé dans les sciences de la santé et les pratiques de soins, avec une approche orientée vers la compétence et le terrain.",
+    category: "Santé et soins",
+    logo: "/instituts parternaires/file_00000000426871f4b8b8da59e3463344.png",
+    programs: [
+      "Sciences de la santé",
+      "Soins pratiques",
+      "Formation sanitaire",
+    ],
+  },
+  {
+    name: "Profutur",
+    description:
+      "Un institut tourné vers la professionnalisation et les parcours d'avenir, avec une approche orientée vers la réussite et l'insertion.",
+    category: "Formation et insertion",
+    logo: "/instituts parternaires/file_000000006ff071f4b107ff1d69b94f3b.png",
+    programs: [
+      "Formation professionnelle",
+      "Insertion",
+      "Accompagnement au projet",
+    ],
+  },
+  {
     name: "I.H.E.S.P",
     description:
       "L'Institut des Hautes Études en Santé Publique forme des apprenants aux enjeux de santé publique, de prévention et de gestion des services de santé.",
