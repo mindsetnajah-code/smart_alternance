@@ -13,7 +13,7 @@ import {
 } from "lucide-react"
 
 const trustItems = [
-  "Accompagnement personnalise",
+  "Accompagnement personnalisé",
   "Partenariats solides",
   "Suivi professionnel",
 ]
@@ -26,7 +26,7 @@ const quickNotes = [
   },
   {
     icon: Sparkles,
-    label: "Bourses et opportunites",
+    label: "Bourses et opportunités",
     className: "hidden md:flex right-[-0.5rem] top-8 animate-[drift_9s_ease-in-out_infinite]",
   },
   {
@@ -40,7 +40,7 @@ const stats = [
   {
     icon: GraduationCap,
     value: "500+",
-    label: "Etudiants accompagnes",
+    label: "Étudiants accompagnés",
     tone: "primary",
   },
   {
@@ -85,7 +85,7 @@ export function HeroSection() {
             </h1>
 
             <p className="mx-auto mb-8 max-w-2xl text-pretty text-lg leading-8 text-muted-foreground lg:mx-0 md:text-xl">
-                Un Etudier a l'etranger complet pour les eleves et etudiants BEPC, BAC, candidats libres, licence et master.
+                Un programme complet pour les élèves et étudiants BEPC, BAC, candidats libres, licence et master.
             </p>
 
             <div className="mb-8 flex flex-wrap items-center justify-center gap-3 text-sm text-muted-foreground lg:justify-start">
@@ -107,7 +107,7 @@ export function HeroSection() {
                   Orientation + bourse
                 </div>
                 <p className="text-sm leading-6 text-muted-foreground">
-                  Nous vous aidons a choisir la bonne voie et a acceder a des opportunites concretes.
+                  Nous vous aidons à choisir la bonne voie et à accéder à des opportunités concrètes.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-secondary/10 bg-white/85 p-4 shadow-sm backdrop-blur">
@@ -116,7 +116,7 @@ export function HeroSection() {
                   Carriere acceleree
                 </div>
                 <p className="text-sm leading-6 text-muted-foreground">
-                  Une formation encadree, des partenaires solides et un vrai passage vers l'emploi.
+                  Une formation encadree, des partenaires solides et un vrai passage vers l&apos;emploi.
                 </p>
               </div>
             </div>
@@ -127,7 +127,7 @@ export function HeroSection() {
                   size="lg"
                   className="bg-primary text-primary-foreground shadow-lg shadow-primary/20 hover:bg-primary/90"
                 >
-                  S'inscrire maintenant
+                  S&apos;inscrire maintenant
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -137,7 +137,7 @@ export function HeroSection() {
                 variant="outline"
                 className="border-secondary/20 bg-white/75 text-secondary shadow-sm hover:bg-white hover:text-primary"
               >
-                <a href="#etudier-a-letranger">Decouvrir Etudier a l'etranger</a>
+                <a href="#etudier-a-letranger">Découvrir le programme</a>
               </Button>
             </div>
 
@@ -187,7 +187,7 @@ export function HeroSection() {
 
                 <div className="mt-6 grid gap-3">
                   <div className="rounded-2xl border border-secondary/15 bg-secondary/5 px-4 py-3 text-sm text-foreground">
-                    Orientation academique, bourse et accompagnement vers l'emploi.
+                    Orientation académique, bourse et accompagnement vers l&apos;emploi.
                   </div>
                   <div className="rounded-2xl border border-primary/15 bg-primary/5 px-4 py-3 text-sm text-muted-foreground">
                     Formation. Insertion. Excellence.

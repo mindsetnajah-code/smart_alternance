@@ -12,18 +12,18 @@ export const metadata: Metadata = {
     template: '%s | Smart Alternance',
   },
   description:
-    "Un Etudier a l'etranger complet pour les eleves et etudiants : orientation, bourse d'etude, formation de qualite et insertion professionnelle au Niger.",
+    "Un programme complet pour les élèves et étudiants : orientation, bourse d'étude, formation de qualité et insertion professionnelle au Niger.",
   keywords: [
     'Smart Alternance',
-    'orientation etudiante',
-    "bourse d'etude Niger",
+    'orientation étudiante',
+    "bourse d'étude Niger",
     'instituts partenaires Niger',
-    'inscription etudiant Niger',
+    'inscription étudiant Niger',
   ],
   openGraph: {
     title: 'Smart Alternance - Construisez votre avenir',
     description:
-      "Orientation, bourse d'etude et accompagnement vers la reussite professionnelle pour les eleves et etudiants au Niger.",
+      "Orientation, bourse d'étude et accompagnement vers la réussite professionnelle pour les élèves et étudiants au Niger.",
     type: 'website',
     locale: 'fr_NE',
   },

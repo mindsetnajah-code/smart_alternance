@@ -31,7 +31,7 @@ function formatLevel(level: string) {
 }
 
 function formatField(label: string, value: string) {
-  return `${label}: ${value.trim() || "Non renseigne"}`
+  return `${label}: ${value.trim() || "Non renseigné"}`
 }
 
 export function buildApplicationPdf(data: ApplicationData) {
@@ -45,10 +45,10 @@ export function buildApplicationPdf(data: ApplicationData) {
     "",
     formatField("Nom complet", data.nom),
     formatField("Niveau", formatLevel(data.niveau)),
-    formatField("Telephone", data.telephone),
-    formatField("Telephone parent", data.telephoneParent),
+    formatField("Téléphone", data.telephone),
+    formatField("Téléphone parent", data.telephoneParent),
     formatField("Email", data.email),
-    formatField("Filiere", data.filiere),
+    formatField("Filière", data.filiere),
     "",
     `Date de soumission: ${createdAt}`,
   ]

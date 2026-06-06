@@ -4,7 +4,7 @@ import { Mail, MapPin, MessageCircle, Phone, Sparkles } from "lucide-react"
 
 const navLinks = [
   { href: "/", label: "Accueil" },
-  { href: "/programme", label: "Etudier a l'etranger" },
+  { href: "/programme", label: "Programme" },
   { href: "/instituts", label: "Instituts partenaires" },
   { href: "/inscription", label: "Inscription" },
 ]
@@ -28,7 +28,7 @@ export function Footer() {
               Smart Alternance
             </div>
             <p className="max-w-2xl text-sm leading-6 text-[#f4efe4]/78">
-              Un accompagnement moderne pour transformer vos etudes en opportunites concretes.
+              Un accompagnement moderne pour transformer vos études en opportunités concrètes.
             </p>
           </div>
 
@@ -65,8 +65,8 @@ export function Footer() {
             </div>
 
             <p className="max-w-sm text-sm leading-6 text-[#f4efe4]/78">
-              Construisez votre avenir avec un Etudier a l'etranger complet pour les eleves et etudiants, du choix de parcours
-              jusqu'a l'insertion professionnelle.
+              Construisez votre avenir avec un programme complet pour les élèves et étudiants, du choix de parcours
+              jusqu&apos;à l&apos;insertion professionnelle.
             </p>
           </div>
 
@@ -120,7 +120,7 @@ export function Footer() {
                 </a>
               </div>
               <p className="text-sm leading-6 text-[#f4efe4]/78">
-                Ecrivez-nous directement sur WhatsApp pour obtenir une reponse rapide de l'equipe.
+                Écrivez-nous directement sur WhatsApp pour obtenir une réponse rapide de l&apos;équipe.
               </p>
             </div>
           </div>

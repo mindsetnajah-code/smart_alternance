@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'Smart Alternance',
     short_name: 'Smart Alternance',
     description:
-      "Orientation, bourse d'etude et accompagnement vers la reussite professionnelle au Niger.",
+      "Orientation, bourse d'étude et accompagnement vers la réussite professionnelle au Niger.",
     start_url: '/',
     display: 'standalone',
     background_color: '#fcfbf7',

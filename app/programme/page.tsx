@@ -19,9 +19,9 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Etudier a l'etranger",
+  title: "Étudier à l'étranger",
   description:
-    "Découvrez Etudier a l'etranger Smart Alternance, les destinations d'études disponibles et l'accompagnement complet proposé aux étudiants.",
+    "Découvrez le programme Smart Alternance, les destinations d'études disponibles et l'accompagnement complet proposé aux étudiants.",
 }
 
 const contactPhone = "+227 86366706"
@@ -34,7 +34,7 @@ const pillars = [
     description: "Un accès facilité à des études de qualité avec un budget mieux maîtrisé.",
     features: [
       "Orientation vers des formations adaptées à votre profil",
-      "Réduction pouvant aller jusqu'à 50% selon Etudier a l'etranger",
+      "Réduction pouvant aller jusqu'à 50% selon le programme",
       "Suivi personnalisé avant et après l'inscription",
       "Conseils sur le choix de la filière et du pays",
     ],
@@ -154,14 +154,14 @@ export default function ProgrammePage() {
             <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
               <div>
                 <span className="mb-5 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white/90">
-                  Etudier a l'etranger Smart Alternance
+                  Programme Smart Alternance
                 </span>
                 <h1 className="max-w-3xl text-balance text-4xl font-bold md:text-5xl">
-                  Un accompagnement structuré pour étudier au Niger ou à l'international
+                  Un accompagnement structuré pour étudier au Niger ou à l&apos;international
                 </h1>
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">
-                  Nous vous accompagnons de l'orientation à l'admission, puis jusqu'aux démarches
-                  administratives, au logement et à l'installation dans votre pays d'études.
+                  Nous vous accompagnons de l&apos;orientation à l&apos;admission, puis jusqu&apos;aux démarches
+                  administratives, au logement et à l&apos;installation dans votre pays d&apos;études.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
                   <Button asChild size="lg" className="bg-white text-secondary hover:bg-white/92">
@@ -182,7 +182,7 @@ export default function ProgrammePage() {
                 <div className="relative h-[26rem] overflow-hidden rounded-[1.4rem] bg-white p-3 sm:h-[32rem] lg:h-[36rem]">
                   <Image
                     src={destinationImages.Canada}
-                    alt="Visuel Smart Alternance d'Etudier a l'etranger et des destinations"
+                    alt="Visuel Smart Alternance du programme et des destinations"
                     fill
                     className="object-contain"
                     sizes="(max-width: 1024px) 100vw, 45vw"
@@ -199,7 +199,7 @@ export default function ProgrammePage() {
           <div className="container mx-auto px-4">
             <div className="mx-auto mb-14 max-w-2xl text-center">
               <h2 className="text-balance text-3xl font-bold text-foreground md:text-4xl">
-                Etudier a l'etranger en 3 piliers
+                Programme en 3 piliers
               </h2>
               <p className="mt-4 text-pretty text-muted-foreground">
                 Un cadre simple, concret et rassurant pour vous aider à avancer avec méthode.
@@ -390,11 +390,11 @@ export default function ProgrammePage() {
                   Accompagnement personnalisé
                 </span>
                 <h2 className="mt-5 text-balance text-3xl font-bold text-foreground md:text-4xl">
-                  Prêt à démarrer votre projet d'études ?
+                  Prêt à démarrer votre projet d&apos;études ?
                 </h2>
                 <p className="mt-4 max-w-xl text-pretty text-muted-foreground">
                   Contactez-nous pour un accompagnement personnalisé de A à Z, depuis la définition
-                  de votre projet jusqu'à votre installation dans votre pays d'accueil.
+                  de votre projet jusqu&apos;à votre installation dans votre pays d&apos;accueil.
                 </p>
               </div>
 
@@ -422,7 +422,7 @@ export default function ProgrammePage() {
                 </div>
                 <div className="rounded-2xl border border-border bg-white p-5">
                   <ArrowRight className="h-5 w-5 text-primary" />
-                  <p className="mt-3 text-sm font-semibold text-foreground">Passage à l'action</p>
+                  <p className="mt-3 text-sm font-semibold text-foreground">Passage à l&apos;action</p>
                   <p className="mt-1 text-sm text-muted-foreground">
                     Une équipe disponible pour transformer votre projet en plan concret.
                   </p>

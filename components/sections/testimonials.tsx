@@ -5,9 +5,9 @@ import { Quote, Star } from "lucide-react"
 const testimonials = [
   {
     name: "Myriam Boube.",
-    role: "Etudiante en agronomie pastorale",
+    role: "Étudiante en agronomie pastorale",
     content:
-      "Grace a Smart Alternance, j'ai pu rejoindre une formation en agronomie pastorale avec une bourse de 50%. Le suivi personnalise m'a aidee a construire un projet solide en lien avec l'elevage et le developpement rural.",
+      "Grâce à Smart Alternance, j'ai pu rejoindre une formation en agronomie pastorale avec une bourse de 50%. Le suivi personnalisé m'a aidée à construire un projet solide en lien avec l'élevage et le développement rural.",
     reaction: "😍",
     tag: "Bourse obtenue",
     avatar: "/image testimonials/file_00000000039c71f48e34f323b410a919.png",
@@ -15,9 +15,9 @@ const testimonials = [
   },
   {
     name: "Abdoul Majid Soumana.",
-    role: "Etudiant en agronomie elevage",
+    role: "Étudiant en agronomie élevage",
     content:
-      "Les formations complementaires et l'accompagnement de Smart Alternance m'ont permis de mieux valoriser mon profil en agronomie elevage. J'ai gagne en assurance pour presenter mon projet d'etudes et mes ambitions dans le secteur pastoral.",
+      "Les formations complémentaires et l'accompagnement de Smart Alternance m'ont permis de mieux valoriser mon profil en agronomie élevage. J'ai gagné en assurance pour présenter mon projet d'études et mes ambitions dans le secteur pastoral.",
     reaction: "🔥",
     tag: "Confiance +100%",
     avatar: "/image testimonials/file_00000000ba9071f481dfeee71759b923.png",
@@ -27,7 +27,7 @@ const testimonials = [
     name: "Oumarou Guero Fatiya.",
     role: "Stage d'immersion",
     content:
-      "Le Etudier a l'etranger d'insertion professionnelle est incroyable. J'ai obtenu un stage dans une grande entreprise des ma deuxieme annee.",
+      "Le programme d'insertion professionnelle est incroyable. J'ai obtenu un stage dans une grande entreprise dès ma deuxième année.",
     reaction: "👏",
     tag: "Stage valide",
     avatar: "/image testimonials/file_000000003f1471f49dcc945c01f27919.png",
@@ -56,7 +56,7 @@ const galleryImages = [
 const reactions = [
   { label: "Avis positifs", value: "4.9/5" },
   { label: "Recommandations", value: "92%" },
-  { label: "Etudiants actifs", value: "500+" },
+  { label: "Étudiants actifs", value: "500+" },
 ]
 
 export function TestimonialsSection() {
@@ -73,15 +73,15 @@ export function TestimonialsSection() {
           <div className="max-w-2xl">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white/85 px-4 py-2 text-sm font-medium text-primary shadow-sm backdrop-blur">
               <span className="animate-[float_5s_ease-in-out_infinite]">💬</span>
-              Des temoignages qui inspirent
+              Des témoignages qui inspirent
             </div>
 
             <h2 className="mb-4 text-balance text-3xl font-bold text-foreground md:text-4xl">
-              Ce que disent nos etudiants
+              Ce que disent nos étudiants
             </h2>
             <p className="max-w-xl text-pretty text-lg text-muted-foreground">
-              Une section plus vivante avec des reactions visibles, des portraits en mouvement et une ambiance qui donne
-              confiance des le premier regard.
+              Une section plus vivante avec des réactions visibles, des portraits en mouvement et une ambiance qui donne
+              confiance du premier regard.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">

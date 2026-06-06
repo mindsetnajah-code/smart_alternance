@@ -3,27 +3,27 @@ import { Heart, Percent, Rocket, Sparkles, Wrench } from "lucide-react"
 const advantages = [
   {
     icon: Heart,
-    title: "Accompagnement personnalise",
-    description: "Un suivi individuel tout au long de votre parcours avec des conseillers dedies.",
+    title: "Accompagnement personnalisé",
+    description: "Un suivi individuel tout au long de votre parcours avec des conseillers dédiés.",
   },
   {
     icon: Percent,
-    title: "Reduction des frais",
-    description: "Beneficiez d'une reduction de 50% sur vos frais de scolarite pendant 3 ans.",
+    title: "Réduction des frais",
+    description: "Bénéficiez d'une réduction de 50% sur vos frais de scolarité pendant 3 ans.",
   },
   {
     icon: Wrench,
     title: "Formation pratique",
-    description: "Des competences concretes et directement applicables en entreprise.",
+    description: "Des compétences concrètes et directement applicables en entreprise.",
   },
   {
     icon: Rocket,
     title: "Insertion rapide",
-    description: "Un reseau de partenaires pour faciliter votre entree dans le monde professionnel.",
+    description: "Un réseau de partenaires pour faciliter votre entrée dans le monde professionnel.",
   },
 ]
 
-const highlights = ["Suivi humain", "Frais reduits", "Competences utiles", "Debouches rapides"]
+const highlights = ["Suivi humain", "Frais réduits", "Compétences utiles", "Débouchés rapides"]
 
 export function AdvantagesSection() {
   return (
@@ -43,8 +43,8 @@ export function AdvantagesSection() {
               Pourquoi choisir Smart Alternance ?
             </h2>
             <p className="max-w-xl text-pretty text-lg text-muted-foreground">
-              Des avantages concrets pour construire votre avenir professionnel avec plus de clarte, plus de soutien
-              et plus d'opportunites.
+              Des avantages concrets pour construire votre avenir professionnel avec plus de clarté, plus de soutien
+              et plus d&apos;opportunités.
             </p>
           </div>
 

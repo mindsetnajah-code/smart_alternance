@@ -9,7 +9,7 @@ const faqs = [
   {
     question: "Qui peut s'inscrire à Smart Alternance ?",
     answer:
-      "Le Etudier a l'etranger est ouvert aux élèves titulaires du BEPC, du BAC, ainsi qu'aux candidats libres souhaitant poursuivre leurs études dans des instituts professionnels, techniques ou d'ingénierie.",
+      "Le programme est ouvert aux élèves titulaires du BEPC, du BAC, ainsi qu'aux candidats libres souhaitant poursuivre leurs études dans des instituts professionnels, techniques ou d'ingénierie.",
   },
   {
     question: "Comment fonctionne la bourse d'étude ?",
@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "Comment se déroule l'insertion professionnelle ?",
     answer:
-      "Notre Etudier a l'etranger d'insertion comprend des stages académiques, des stages d'immersion en entreprise, des stages post-diplôme et un accompagnement personnalisé vers le recrutement grâce à notre réseau de partenaires.",
+      "Notre programme d'insertion comprend des stages académiques, des stages d'immersion en entreprise, des stages post-diplôme et un accompagnement personnalisé vers le recrutement grâce à notre réseau de partenaires.",
   },
   {
     question: "Quels sont les instituts partenaires ?",
@@ -42,7 +42,7 @@ export function FAQSection() {
             Questions fréquentes
           </h2>
           <p className="text-pretty text-muted-foreground">
-            Trouvez les réponses à vos questions sur notre Etudier a l'etranger
+            Trouvez les réponses à vos questions sur notre programme
           </p>
         </div>
 

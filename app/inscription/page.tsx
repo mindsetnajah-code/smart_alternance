@@ -82,7 +82,7 @@ function InscriptionPageContent() {
   const [shareMode, setShareMode] = useState<"share" | "fallback">("fallback")
   const [generatedPdfUrl, setGeneratedPdfUrl] = useState("")
   const [errors, setErrors] = useState<FormErrors>({})
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState(() => ({
     nom: "",
     niveau: "",
     telephone: "",
@@ -90,17 +90,9 @@ function InscriptionPageContent() {
     email: "",
     filiere: "",
     filiereAutre: "",
-    institut: "",
+    institut: searchParams.get("institut") ?? "",
     bourse: "",
-  })
-
-  useEffect(() => {
-    const institut = searchParams.get("institut")
-
-    if (institut) {
-      setFormData((prev) => ({ ...prev, institut }))
-    }
-  }, [searchParams])
+  }))
 
   useEffect(() => {
     return () => {
@@ -220,11 +212,11 @@ function InscriptionPageContent() {
           })
             .then((resp) => resp.json())
             .catch(() => ({}))
-        } catch (err) {
+        } catch {
           // Silent fail for background PDF generation
         }
       }, 0)
-    } catch (err) {
+    } catch {
       setSubmitError(
         "Impossible d'ouvrir WhatsApp pour le moment. Veuillez réessayer."
       )
@@ -481,7 +473,7 @@ function InscriptionPageContent() {
                           size="lg"
                           disabled={isSubmitting}
                         >
-                          {isSubmitting ? "Préparation du PDF..." : "S'inscrire maintenant"}
+                          {isSubmitting ? "Préparation du PDF..." : "S&apos;inscrire maintenant"}
                         </Button>
 
                         <p className="text-center text-xs text-muted-foreground">

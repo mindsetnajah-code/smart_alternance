@@ -115,7 +115,7 @@ const institutes = [
   {
     name: "EPN",
     description:
-      "L'Ecole Polytechnique de Niamey forme des profils techniques et polyvalents avec une approche orientée vers l'innovation, la pratique et l'employabilité.",
+      "L'École Polytechnique de Niamey forme des profils techniques et polyvalents avec une approche orientée vers l'innovation, la pratique et l'employabilité.",
     category: "Polytechnique",
     logo: "/instituts parternaires/IMG_20260602_185851_172@1538726220.jpg",
     programs: [
@@ -127,7 +127,7 @@ const institutes = [
   {
     name: "ESPIM",
     description:
-      "L'Ecole Supérieure Privée d'Ingénierie et de Management associe les compétences techniques et managériales pour préparer des profils complets.",
+      "L'École Supérieure Privée d'Ingénierie et de Management associe les compétences techniques et managériales pour préparer des profils complets.",
     category: "Ingénierie et management",
     logo: "/instituts parternaires/cropped-logo.png",
     programs: [

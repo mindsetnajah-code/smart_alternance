@@ -22,10 +22,10 @@ export function PWAInstallCard() {
             Version application
           </p>
           <h2 className="mt-2 text-xl font-semibold text-foreground">
-            Installez Smart Alternance sur votre telephone
+            Installez Smart Alternance sur votre téléphone
           </h2>
           <p className="mt-2 text-sm leading-6 text-muted-foreground">
-            Acces plus rapide, experience plein ecran et page de secours hors
+            Accès plus rapide, expérience plein écran et page de secours hors
             ligne si la connexion coupe.
           </p>
           <div className="mt-4 flex flex-wrap gap-3 text-xs text-muted-foreground">
@@ -58,7 +58,7 @@ export function PWAInstallCard() {
             menu de votre navigateur puis choisissez
             {' '}<span className="font-medium text-foreground">Installer l&apos;app</span>
             {' '}ou
-            {' '}<span className="font-medium text-foreground">Ajouter a l&apos;ecran d&apos;accueil</span>.
+            {' '}<span className="font-medium text-foreground">Ajouter à l&apos;écran d&apos;accueil</span>.
           </p>
         )}
       </div>

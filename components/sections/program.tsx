@@ -6,27 +6,27 @@ import { BookOpen, Check, Sparkles, Target, Wallet } from "lucide-react"
 const programs = [
   {
     icon: Wallet,
-    title: "Plan economique",
-    description: "Un acces facilite a l'education de qualite",
+    title: "Plan économique",
+    description: "Un accès facilité à l'éducation de qualité",
     color: "primary",
-    badge: "Bourse jusqu'a 50%",
+    badge: "Bourse jusqu'à 50%",
     features: [
-      "Inscription dans des instituts professionnels, techniques et d'ingenierie",
-      "Bourse d'etude : reduction de 50% pendant 3 ans",
-      "Suivi academique personnalise",
-      "Aide au choix de filiere",
+      "Inscription dans des instituts professionnels, techniques et d'ingénierie",
+      "Bourse d'étude : réduction de 50% pendant 3 ans",
+      "Suivi académique personnalisé",
+      "Aide au choix de filière",
     ],
   },
   {
     icon: BookOpen,
-    title: "Formation complementaire",
-    description: "Des competences cles pour l'avenir",
+    title: "Formation complémentaire",
+    description: "Des compétences clés pour l'avenir",
     color: "secondary",
-    badge: "Competences pratiques",
+    badge: "Compétences pratiques",
     features: [
-      "Informatique avancee et design",
+      "Informatique avancée et design",
       "Anglais et art oratoire",
-      "Developpement personnel",
+      "Développement personnel",
       "Leadership et entrepreneuriat",
     ],
   },
@@ -37,9 +37,9 @@ const programs = [
     color: "primary",
     badge: "Orientation vers l'emploi",
     features: [
-      "Stage academique encadre",
+      "Stage académique encadré",
       "Stage d'immersion en entreprise",
-      "Stage post-diplome",
+      "Stage post-diplôme",
       "Accompagnement au recrutement",
     ],
   },
@@ -59,13 +59,13 @@ export function ProgramSection() {
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white/85 px-4 py-2 text-sm font-medium text-primary shadow-sm backdrop-blur">
             <Sparkles className="h-4 w-4" />
-            Un parcours pense pour la reussite
+            Un parcours pensé pour la réussite
           </div>
           <h2 className="mb-4 text-balance text-3xl font-bold text-foreground md:text-4xl">
-            Etudier a l'etranger en 3 piliers
+            Programme en 3 piliers
           </h2>
           <p className="text-pretty text-lg text-muted-foreground">
-            Un parcours structure pour vous accompagner de la formation jusqu'a l'emploi avec une experience plus
+            Un parcours structuré pour vous accompagner de la formation jusqu&apos;à l&apos;emploi avec une expérience plus
             claire, plus rassurante et plus motivante.
           </p>
         </div>
@@ -137,7 +137,7 @@ export function ProgramSection() {
 
         <div className="mt-10 text-center">
           <Button asChild size="lg" className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
-            <Link href="/programme">Decouvrir Etudier a l'etranger complet</Link>
+            <Link href="/programme">Découvrir le programme complet</Link>
           </Button>
         </div>
       </div>

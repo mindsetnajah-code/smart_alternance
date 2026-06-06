@@ -15,7 +15,7 @@ export function Header() {
 
   const links = [
     { href: "/", label: "Accueil", active: pathname === "/" },
-    { href: "/programme", label: "Etudier a l'etranger", active: pathname === "/programme" },
+    { href: "/programme", label: "Etudier à l'étranger", active: pathname === "/programme" },
     { href: "/instituts", label: "Instituts partenaires", active: pathname === "/instituts" },
   ]
 
@@ -68,7 +68,7 @@ export function Header() {
           <Link href="/inscription">
             <Button className="rounded-full bg-primary px-5 text-primary-foreground shadow-lg shadow-primary/20 hover:bg-primary/90">
               <Sparkles className="h-4 w-4" />
-              S'inscrire
+              S&apos;inscrire
             </Button>
           </Link>
         </nav>
@@ -104,7 +104,7 @@ export function Header() {
             <PWAInstallButton fullWidth />
             <Link href="/inscription" onClick={() => setIsOpen(false)}>
               <Button className="w-full rounded-2xl bg-primary text-primary-foreground hover:bg-primary/90">
-                S'inscrire
+                S&apos;inscrire
               </Button>
             </Link>
           </div>

@@ -12,7 +12,7 @@ export default function OfflinePage() {
         </h1>
         <p className="mt-4 text-base leading-7 text-muted-foreground">
           L&apos;application est bien installable en PWA. Si vous perdez le
-          reseau, nous affichons cette page de secours pour que l&apos;experience
+          réseau, nous affichons cette page de secours pour que l&apos;expérience
           reste claire au lieu d&apos;une erreur navigateur.
         </p>
         <div className="mt-8">
@@ -20,7 +20,7 @@ export default function OfflinePage() {
             href="/"
             className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
-            Revenir a l&apos;accueil
+            Revenir à l&apos;accueil
           </Link>
         </div>
       </div>
