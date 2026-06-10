@@ -297,17 +297,17 @@ const institutes = [
     ],
   },
   {
-    name: "ESGC - École Supérieure de Gestion et Commerce International",
+    name: "Institut Privé des Agents de Santé",
     description:
-      "Une école dédiée aux métiers du commerce international et de la gestion, préparant les étudiants aux opportunités d&apos;emploi dans un contexte mondialisé, avec une forte orientation vers l&apos;export et les échanges commerciaux.",
-    category: "Commerce et gestion international",
+      "Un institut privé spécialisé dans les formations sanitaires et paramédicales, formant des agents de santé compétents pour travailler sur le terrain et accompagner les populations.",
+    category: "Santé et paramédical",
     logo: "/instituts parternaires/file_0000000092a471fdba27a136b1275cf8.png",
     programs: [
-      "Commerce international",
-      "Logistique et douanes",
-      "Gestion d&apos;import-export",
-      "Relations commerciales",
-      "Langues des affaires",
+      "Formation sanitaire",
+      "Soins infirmiers",
+      "Santé communautaire",
+      "Accompagnement paramédical",
+      "Prévention et hygiène",
     ],
   },
 ]
