@@ -282,6 +282,30 @@ const institutes = [
       "Santé et accompagnement clinique",
     ],
   },
+  {
+    name: "Institut Partenaire 1",
+    description:
+      "Un nouvel institut partenaire avec des formations modernes et une approche orientée vers l'employabilité et le développement personnel.",
+    category: "Formation générale",
+    logo: "/instituts parternaires/file_00000000cc5071fd946a049e1057fbf0.png",
+    programs: [
+      "Formation générale",
+      "Professionnalisation",
+      "Insertion professionnelle",
+    ],
+  },
+  {
+    name: "Institut Partenaire 2",
+    description:
+      "Un nouvel institut partenaire proposant des programmes variés adaptés aux enjeux actuels du marché et aux aspirations des étudiants.",
+    category: "Formation spécialisée",
+    logo: "/instituts parternaires/file_0000000092a471fdba27a136b1275cf8.png",
+    programs: [
+      "Formation spécialisée",
+      "Développement de compétences",
+      "Accompagnement personnalisé",
+    ],
+  },
 ]
 
 export default function InstitutsPage() {
