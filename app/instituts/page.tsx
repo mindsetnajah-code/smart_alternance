@@ -283,17 +283,17 @@ const institutes = [
     ],
   },
   {
-    name: "ISIT Niger - Institut Supérieur d&apos;Informatique et de Technologie",
+    name: "Hautes Études Comptables et Financières (H.E.C.F)",
     description:
-      "Un établissement d&apos;excellence dédié aux formations numériques, proposant des programmes en informatique appliquée, cybersécurité et transformation digitale, avec une approche pratique et orientée vers les métiers de demain.",
-    category: "Informatique et technologie",
+      "Un institut spécialisé dans la comptabilité, la finance et la gestion, formant des professionnels capables de maîtriser les techniques comptables, fiscales et financières pour accompagner les entreprises et les administrations.",
+    category: "Comptabilité et finance",
     logo: "/instituts parternaires/file_00000000cc5071fd946a049e1057fbf0.png",
     programs: [
-      "Informatique appliquée",
-      "Cybersécurité",
-      "Transformation digitale",
-      "Développement web et mobile",
-      "Administration réseaux",
+      "Comptabilité générale",
+      "Finance d&apos;entreprise",
+      "Audit et contrôle de gestion",
+      "Fiscalité",
+      "Gestion financière",
     ],
   },
   {
