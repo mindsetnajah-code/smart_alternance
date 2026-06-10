@@ -283,27 +283,31 @@ const institutes = [
     ],
   },
   {
-    name: "Institut Partenaire 1",
+    name: "ISIT Niger - Institut Supérieur d&apos;Informatique et de Technologie",
     description:
-      "Un nouvel institut partenaire avec des formations modernes et une approche orientée vers l'employabilité et le développement personnel.",
-    category: "Formation générale",
+      "Un établissement d&apos;excellence dédié aux formations numériques, proposant des programmes en informatique appliquée, cybersécurité et transformation digitale, avec une approche pratique et orientée vers les métiers de demain.",
+    category: "Informatique et technologie",
     logo: "/instituts parternaires/file_00000000cc5071fd946a049e1057fbf0.png",
     programs: [
-      "Formation générale",
-      "Professionnalisation",
-      "Insertion professionnelle",
+      "Informatique appliquée",
+      "Cybersécurité",
+      "Transformation digitale",
+      "Développement web et mobile",
+      "Administration réseaux",
     ],
   },
   {
-    name: "Institut Partenaire 2",
+    name: "ESGC - École Supérieure de Gestion et Commerce International",
     description:
-      "Un nouvel institut partenaire proposant des programmes variés adaptés aux enjeux actuels du marché et aux aspirations des étudiants.",
-    category: "Formation spécialisée",
+      "Une école dédiée aux métiers du commerce international et de la gestion, préparant les étudiants aux opportunités d&apos;emploi dans un contexte mondialisé, avec une forte orientation vers l&apos;export et les échanges commerciaux.",
+    category: "Commerce et gestion international",
     logo: "/instituts parternaires/file_0000000092a471fdba27a136b1275cf8.png",
     programs: [
-      "Formation spécialisée",
-      "Développement de compétences",
-      "Accompagnement personnalisé",
+      "Commerce international",
+      "Logistique et douanes",
+      "Gestion d&apos;import-export",
+      "Relations commerciales",
+      "Langues des affaires",
     ],
   },
 ]
