@@ -297,6 +297,20 @@ const institutes = [
     ],
   },
   {
+    name: "Institut de formation en science de la santé (IFSS)",
+    description:
+      "Un institut dédié aux formations en sciences de la santé, préparant des professionnels qualifiés pour répondre aux besoins des secteurs sanitaire et médical à travers des parcours pratiques et théoriques.",
+    category: "Sciences de la santé",
+    logo: "/instituts parternaires/file_00000000fbf471f4a0997c7355b5fb3b.png",
+    programs: [
+      "Sciences infirmières",
+      "Santé communautaire",
+      "Prévention santé",
+      "Biologie médicale",
+      "Accompagnement sanitaire",
+    ],
+  },
+  {
     name: "Institut Privé des Agents de Santé",
     description:
       "Un institut privé spécialisé dans les formations sanitaires et paramédicales, formant des agents de santé compétents pour travailler sur le terrain et accompagner les populations.",
