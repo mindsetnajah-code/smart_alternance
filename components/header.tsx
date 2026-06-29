@@ -101,7 +101,7 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <PWAInstallButton fullWidth />
+            <PWAInstallButton fullWidth /> 
             <Link href="/inscription" onClick={() => setIsOpen(false)}>
               <Button className="w-full rounded-2xl bg-primary text-primary-foreground hover:bg-primary/90">
                 S&apos;inscrire

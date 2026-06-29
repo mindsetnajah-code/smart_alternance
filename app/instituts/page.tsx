@@ -324,6 +324,20 @@ const institutes = [
       "Prévention et hygiène",
     ],
   },
+  {
+    name: "IRIMAG",
+    description:
+      "L'Institut Régional d'Informatique, de Marketing, d'Assurance et de Gestion propose des parcours professionnalisants du BEP au Master Pro.",
+    category: "Informatique et gestion",
+    logo: "/instituts parternaires/file_00000000cf90722f89d8577262674c4a.png",
+    programs: [
+      "Informatique",
+      "Marketing",
+      "Assurance",
+      "Gestion",
+      "Management professionnel",
+    ],
+  },
 ]
 
 export default function InstitutsPage() {

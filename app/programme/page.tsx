@@ -73,9 +73,20 @@ const destinationImages: Record<string, string> = {
   Chine: "/destinations/IMG-20260508-WA0152.jpg",
   Turquie: "/destinations/IMG-20260508-WA0153.jpg",
   Espagne: "/destinations/file_00000000ace871f8ab33efb567eae266.png",
+  Senegal: "/destinations/file_00000000722471f6b4612755e31e3bf9.png",
 }
 
 const destinations = [
+  {
+    country: "Sénégal",
+    flag: "🇸🇳",
+    visa: "Sans visa pour les ressortissants CEDEAO",
+    formula: "Accompagnement complet",
+    delay: "1 à 3 mois",
+    partners: "Établissements reconnus à Dakar",
+    services: ["Admission accompagnée", "Hébergement sécurisé", "Accueil à l'aéroport", "Suivi académique"],
+    image: destinationImages.Senegal,
+  },
   {
     country: "Canada",
     flag: "🇨🇦",

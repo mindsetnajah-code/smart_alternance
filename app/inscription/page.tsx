@@ -44,6 +44,7 @@ const institutes = [
   "I.H.E.S.P",
   "ECCAM",
   "HETEC",
+  "IRIMAG",
   "Institut Africain de Santé Privé (I.A.S.P)",
   "ISESS",
   "Université Moderne des Sciences de la Santé (UM2S)",
