@@ -338,6 +338,19 @@ const institutes = [
       "Management professionnel",
     ],
   },
+  {
+    name: "Centre Privé de Formation Professionnelle et Technique La Floraison",
+    description:
+      "Un centre privé orienté vers la formation professionnelle et technique, avec des parcours pensés pour développer des compétences pratiques et préparer les apprenants à l'insertion.",
+    category: "Formation professionnelle et technique",
+    logo: "/instituts parternaires/IMG-20260702-WA0030.jpg",
+    programs: [
+      "Formation professionnelle",
+      "Formation technique",
+      "Compétences pratiques",
+      "Insertion professionnelle",
+    ],
+  },
 ]
 
 export default function InstitutsPage() {

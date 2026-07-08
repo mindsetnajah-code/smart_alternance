@@ -51,6 +51,10 @@ const institutes = [
   "INSA-IGP",
   "Institut Privé d'Excellence en Management et en Comptabilité (I.P.E.M)",
   "Institut Privé des Hautes Études de la Santé (IPHES)",
+  "Hautes Études Comptables et Financières (H.E.C.F)",
+  "Institut de formation en science de la santé (IFSS)",
+  "Institut Privé des Agents de Santé",
+  "Centre Privé de Formation Professionnelle et Technique La Floraison",
 ]
 
 const whatsappNumber = "22786366706"
