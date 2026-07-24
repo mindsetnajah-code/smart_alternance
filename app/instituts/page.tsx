@@ -137,20 +137,6 @@ const institutes = [
     ],
   },
   {
-    name: "IPAGES",
-    description:
-      "Un institut orienté vers les sciences agro-pastorales et le développement rural, avec une formation pensée pour le terrain et l'employabilité.",
-    category: "Agriculture et développement rural",
-    logo: "/instituts parternaires/file_00000000fe1871f494babeb5eafb5a6f.png",
-    programs: [
-      "Agriculture",
-      "Élevage",
-      "Environnement",
-      "Génie rural",
-      "Socio-économie",
-    ],
-  },
-  {
     name: "ISSSPT",
     description:
       "Un institut spécialisé dans les sciences de la santé et les pratiques de soins, avec une approche orientée vers la compétence et le terrain.",
